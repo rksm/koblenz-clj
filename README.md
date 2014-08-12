@@ -1,4 +1,4 @@
-# koblenz
+# koblenz [![Build Status](https://travis-ci.org/rksm/koblenz-clj.svg?branch=master)](https://travis-ci.org/rksm/koblenz-clj)
 
 [Koblenz is a sister city of Austin](http://austintexas.gov/department/sister-cities-program).
 
