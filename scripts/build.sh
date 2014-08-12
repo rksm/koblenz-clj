@@ -3,7 +3,7 @@
 LEIN=`which lein2`
 export LEIN=${LEIN:=lein}
 
-lein do \
-     cljx once, \
-     cljsbuild clean, \
-     cljsbuild once
+$LEIN do \
+      cljx once, \
+      cljsbuild clean, \
+      cljsbuild once

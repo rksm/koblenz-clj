@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-lein ring server-headless
+LEIN=`which lein2`
+export LEIN=${LEIN:=lein}
+
+$LEIN ring server-headless
