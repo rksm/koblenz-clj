@@ -2,7 +2,7 @@
   (:require [org.httpkit.server :as http]
             [compojure.route :as route]
             [compojure.core :as comp]
-            [rksm.koblenz]))
+            [rksm.koblenz.routes]))
 
 (defonce server (atom nil))
 

@@ -24,9 +24,9 @@
 
                  [compojure "1.1.5"]]
 
-  :source-paths ["src/clj"]
+  :source-paths ["src/clj" "test/clj"]
 
-  :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}
+  :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
   ;; FIXME this should autoload a weasel repl but currently throws
   ;; an error won startup
   ;; :cljs-weasel-repl

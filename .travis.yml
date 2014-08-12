@@ -1,3 +1,5 @@
 language: clojure
 lein: lein2
+before_script:
+  - "./scripts/build.sh"
 script: lein2 test
