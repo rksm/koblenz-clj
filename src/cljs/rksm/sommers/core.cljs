@@ -6,7 +6,7 @@
 (if (:nrepl-websocket? config)
   (if-not (weasel-repl/alive?)
     (weasel-repl/connect
-     (str "ws://localhost:" (:nrepl-tcp-port config))
+     (str "ws://localhost:" (:nrepl-websocket-port config))
      :verbose true))
   (default-repl/connect
-    (str "http://localhost:" (:nrepl-websocket-port config) "/repl")))
+    (str "http://localhost:" (:nrepl-tcp-port config) "/repl")))
