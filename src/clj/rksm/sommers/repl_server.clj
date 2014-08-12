@@ -52,11 +52,12 @@
 
 (defn start-browser-repl-weasel
   [env]
-  (eval env '(do (require 'weasel.repl.websocket)
-             (cemerick.piggieback/cljs-repl
-              :repl-env (weasel.repl.websocket/repl-env
-                         :ip "0.0.0.0"
-                         :port (:nrepl-websocket-port cfg/config)))))
+  (let [port (:nrepl-websocket-port cfg/config)]
+    (eval env `(do (require 'weasel.repl.websocket)
+                   (cemerick.piggieback/cljs-repl
+                    :repl-env (weasel.repl.websocket/repl-env
+                               :ip "0.0.0.0"
+                               :port ~port)))))
   (swap! env #(assoc % :browser-repl-enabled true)))
 
 (defn start-browser-repl-default

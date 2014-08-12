@@ -50,6 +50,7 @@
   (def v (s/start :cljs-connect false))
   (def v test-env)
   (def v repl-env/nrepl-env)
+  (def v @rksm.sommers.repl-env/nrepl-env)
   (s/eval v '(+ 20 3))
   (s/stop v)
 
