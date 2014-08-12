@@ -10,15 +10,17 @@ This project provides easy setup for nrepl-based browser sessions. It is
 currently used for testing nrepl-cljs extensions. You can do other things with
 it or just use [austin](https://github.com/cemerick/austin).
 
-## Setup
+## Usage
 
-1. Compile ClojureScript code
-
-        ./scripts/build.sh
-
-2. Use it in your app:
-
-...
+```clojure
+(require '[rksm.sommers.repl-env :as repl-env])
+(repl-env/boot-cljs)
+;; now do stuff like
+(repl-env/eval '(+ 20 3))
+(repl-env/eval '(.log js/console js/Array))
+;; ...
+(repl-env/shutdown)
+```
 
 ## License
 
