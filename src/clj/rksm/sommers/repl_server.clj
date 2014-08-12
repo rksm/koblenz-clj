@@ -1,9 +1,9 @@
-(ns rksm.koblenz.repl-server
+(ns rksm.sommers.repl-server
   (:require [clojure.tools.nrepl.server :as server]
             [clojure.tools.nrepl :as nrepl]
             [cider.nrepl]
             [cemerick.piggieback]
-            [rksm.koblenz.config :refer [config]]))
+            [rksm.sommers.config :refer [config]]))
 
 
 (def default-env {:port 7892
@@ -137,7 +137,7 @@
 
   (lein cljsbuild once)
   
-  (require '[rksm.koblenz.proc :as p])
+  (require '[rksm.sommers.proc :as p])
   (def proc (p/start-phantom-js "http://localhost:3000/example.html"))
   (.destroy (:proc proc))
 

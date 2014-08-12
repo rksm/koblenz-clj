@@ -1,4 +1,4 @@
-(ns rksm.koblenz.config)
+(ns rksm.sommers.config)
 
 (def config {:nrepl-websocket-port 9050
              :nrepl-tcp-port 9010

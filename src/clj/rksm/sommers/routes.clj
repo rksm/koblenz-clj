@@ -1,4 +1,4 @@
-(ns rksm.koblenz.routes
+(ns rksm.sommers.routes
   (:require [compojure.route :as route]
             [compojure.handler :as handler]
             [compojure.response :as response]

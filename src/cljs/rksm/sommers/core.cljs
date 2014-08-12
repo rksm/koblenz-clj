@@ -1,7 +1,7 @@
-(ns rksm.koblenz.core
+(ns rksm.sommers.core
   (:require [clojure.browser.repl :as default-repl]
             [weasel.repl :as weasel-repl]
-            [rksm.koblenz.config :refer [config]]))
+            [rksm.sommers.config :refer [config]]))
 
 (if (:nrepl-websocket? config)
   (if-not (weasel-repl/alive?)

@@ -1,9 +1,9 @@
-(ns rksm.koblenz.nrepl-server-test
+(ns rksm.sommers.nrepl-server-test
   (:require [clojure.test :refer :all]
-            [rksm.koblenz.repl-server :as s]
-            [rksm.koblenz.phantom :as phan]
+            [rksm.sommers.repl-server :as s]
+            [rksm.sommers.phantom :as phan]
             [clojure.core.async :as async]
-            [rksm.koblenz.web-server :as web]))
+            [rksm.sommers.web-server :as web]))
 
 
 (def test-env (atom s/default-env))

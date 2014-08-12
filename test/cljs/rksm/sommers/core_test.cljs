@@ -1,4 +1,4 @@
-(ns rksm.koblenz.core-test
+(ns rksm.sommers.core-test
   (:require-macros [cemerick.cljs.test
                     :refer (is deftest with-test run-tests testing test-var)])
   (:require [cemerick.cljs.test :as t]))
@@ -22,6 +22,6 @@
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 (comment
-  (t/test-ns 'koblenz.core-test)
-  (test-var #'koblenz.core-test/somewhat-less-wat)
+  (t/test-ns 'sommers.core-test)
+  (test-var #'sommers.core-test/somewhat-less-wat)
   )

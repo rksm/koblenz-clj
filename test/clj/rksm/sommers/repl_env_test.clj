@@ -1,8 +1,8 @@
-(ns rksm.koblenz.repl-env-test
+(ns rksm.sommers.repl-env-test
   (:require [clojure.test :refer :all]
-            [rksm.koblenz.repl-server :as s]
+            [rksm.sommers.repl-server :as s]
             [clojure.core.async :as async]
-            [rksm.koblenz.repl-env :as repl-env]))
+            [rksm.sommers.repl-env :as repl-env]))
 
 (use-fixtures :once
   (fn [f]

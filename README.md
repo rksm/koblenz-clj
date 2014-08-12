@@ -1,8 +1,12 @@
-# koblenz [![Build Status](https://travis-ci.org/rksm/koblenz-clj.svg?branch=master)](https://travis-ci.org/rksm/koblenz-clj)
+# sommers [![Build Status](https://travis-ci.org/rksm/sommers.svg?branch=master)](https://travis-ci.org/rksm/sommers)
 
-[Koblenz is a sister city of Austin](http://austintexas.gov/department/sister-cities-program).
+Because [spinoffs](https://www.youtube.com/watch?v=qcba-ZgtsT4) are fun.
 
-This project provides easy setup for nrepl-based browser sessions. It is currently used for testing nrepl-cljs extensions. You can do other things with it or just use [austin](https://github.com/cemerick/austin).
+![](https://dl.dropboxusercontent.com/u/13564951/screenshots/sommers.png)
+
+This project provides easy setup for nrepl-based browser sessions. It is
+currently used for testing nrepl-cljs extensions. You can do other things with
+it or just use [austin](https://github.com/cemerick/austin).
 
 ## Setup
 
@@ -12,7 +16,7 @@ This project provides easy setup for nrepl-based browser sessions. It is current
 
 2. Use it in your app:
 
-
+...
 
 ## License
 

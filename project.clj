@@ -1,13 +1,13 @@
-(defproject rksm/koblenz "0.1.0-SNAPSHOT"
+(defproject rksm/sommers "0.1.0-SNAPSHOT"
   :description "easy browser repl setup"
-  :url "https://github.com/rksm/koblenz-clj"
+  :url "https://github.com/rksm/sommers"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :plugins [[lein-ring "0.8.7"]
             [com.keminglabs/cljx "0.4.0"]
             [lein-cljsbuild "1.0.4-SNAPSHOT"]
             [com.cemerick/clojurescript.test "0.3.1"]]
-  :ring {:handler koblenz.routes/app}
+  :ring {:handler sommers.routes/app}
   :dependencies [[org.clojure/clojure "1.6.0"]
                  ;;; FIXME currently a brepl seems only to work with 2202 or
                  ;;; older...

@@ -1,8 +1,8 @@
-(ns rksm.koblenz.repl-env
+(ns rksm.sommers.repl-env
   (:require [rksm.subprocess :as p]
-            [rksm.koblenz.repl-server :as repl-server]
-            [rksm.koblenz.web-server :as web-server]
-            [rksm.koblenz.phantom :as phantom]))
+            [rksm.sommers.repl-server :as repl-server]
+            [rksm.sommers.web-server :as web-server]
+            [rksm.sommers.phantom :as phantom]))
 
 (defonce shutdown-fn (atom nil))
 
@@ -73,7 +73,7 @@
 
   (lein cljsbuild once)
 
-  (require '[rksm.koblenz.proc :as p])
+  (require '[rksm.sommers.proc :as p])
   (def proc (p/start-phantom-js "http://localhost:3000/example.html"))
   (.destroy (:proc proc))
   )

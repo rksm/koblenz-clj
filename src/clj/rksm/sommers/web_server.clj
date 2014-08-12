@@ -1,8 +1,8 @@
-(ns rksm.koblenz.web-server
+(ns rksm.sommers.web-server
   (:require [org.httpkit.server :as http]
             [compojure.route :as route]
             [compojure.core :as comp]
-            [rksm.koblenz.routes]))
+            [rksm.sommers.routes]))
 
 (defonce server (atom nil))
 
@@ -15,7 +15,7 @@
 
 (defn start-server [& [port]]
   (when server (stop-server))
-  (reset! server (http/run-server #'rksm.koblenz.routes/routes {:port (or port 8080)}))
+  (reset! server (http/run-server #'rksm.sommers.routes/routes {:port (or port 8080)}))
   (println "web server running on port" (or port 8080)))
 
 (comment
