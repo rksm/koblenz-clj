@@ -31,10 +31,14 @@
   (repl-env/eval '(+ 20 3))
   (repl-env/eval '(.log js/console js/Array))
 
+  (require '[rksm.sommers.config :as c])
+  c/config
+  
   (repl-env/boot-cljs)
   (repl-env/shutdown)
 
   (lein cljsbuild clean)
+  (lein cljx once)
   (lein cljsbuild once)
 
   (refresh)

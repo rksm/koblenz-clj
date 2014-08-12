@@ -3,8 +3,7 @@
             [clojure.tools.nrepl :as nrepl]
             [cider.nrepl]
             [cemerick.piggieback]
-            [rksm.sommers.config :refer [config]]))
-
+            [rksm.sommers.config :as cfg]))
 
 (def default-env {:port 7892
                   :server nil
@@ -57,20 +56,20 @@
              (cemerick.piggieback/cljs-repl
               :repl-env (weasel.repl.websocket/repl-env
                          :ip "0.0.0.0"
-                         :port (:nrepl-websocket-port config)))))
+                         :port (:nrepl-websocket-port cfg/config)))))
   (swap! env #(assoc % :browser-repl-enabled true)))
 
 (defn start-browser-repl-default
   [env]
-  (eval env '(do (require 'cljs.repl.browser)
-                 (cemerick.piggieback/cljs-repl
-                  :repl-env (cljs.repl.browser/repl-env
-                             :port (:nrepl-tcp-port config)))))
+  (let [port (:nrepl-tcp-port cfg/config)]
+   (eval env `(do (require 'cljs.repl.browser)
+                  (cemerick.piggieback/cljs-repl
+                   :repl-env (cljs.repl.browser/repl-env :port ~port)))))
   (swap! env #(assoc % :browser-repl-enabled true)))
 
 (defn start-browser-repl
   [env]
-  (if (:nrepl-websocket? config)
+  (if (:nrepl-websocket? cfg/config)
    (start-browser-repl-weasel env)
    (start-browser-repl-default env)))
 

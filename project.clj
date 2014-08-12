@@ -26,7 +26,6 @@
 
   :source-paths ["src/clj" "test/clj"]
 
-  :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
   ;; FIXME this should autoload a weasel repl but currently throws
   ;; an error won startup
   ;; :cljs-weasel-repl
@@ -43,11 +42,12 @@
                   {:source-paths ["src/cljx"]
                    :output-path "target/generated/cljs"
                    :rules :cljs}]}
-  :hooks [cljx.hooks]
+  :hooks [cljx.hooks leiningen.cljsbuild]
 
   :cljsbuild {:builds {:example {:source-paths ["src/cljs" "target/generated/cljs"]
                                  :compiler {:output-to "resources/public/js/example.js"
-                                            :optimizations :whitespace}}
+                                            :optimizations :whitespace}
+                                 :jar true}
                        :tests {:source-paths ["src/cljs" "target/generated/cljs" "test/cljs"]
                                :compiler {:output-to "target/js/tests.js"
                                           :optimizations :whitespace}}}
