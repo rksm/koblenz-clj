@@ -1,5 +1,7 @@
 # sommers [![Build Status](https://travis-ci.org/rksm/sommers.svg?branch=master)](https://travis-ci.org/rksm/sommers)
 
+[![Clojars Project](http://clojars.org/rksm/sommers/latest-version.svg)](http://clojars.org/rksm/sommers)
+
 Because [spinoffs](https://www.youtube.com/watch?v=qcba-ZgtsT4) are fun.
 
 ![](https://dl.dropboxusercontent.com/u/13564951/screenshots/sommers.png)
