@@ -12,9 +12,10 @@
 
 (deftest repl-env-cljs
   (testing "simple eval"
-    (let [eval-res (repl-env/eval '(+ 20 3))
+    (let [eval-res (repl-env/remote-eval (+ 20 3))
           answer (:value (first eval-res))]
-      (is (= "23" answer)))))
+      (is (= "23" answer)))
+    (is (= 23 (repl-env/remote-eval-val (+ 20 3))))))
 
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 

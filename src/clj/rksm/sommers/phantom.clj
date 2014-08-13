@@ -16,7 +16,8 @@
   [url]
   (let [p (p/async-proc "phantomjs" phantomjs-source url)]
     (println "phantom started")
-    (future (while (not (.closed? (:out @p))) (println (async/<!! (:out @p)))))
+    (future (while (not (.closed? (:out @p)))
+              (println (async/<!! (:out @p)))))
     p))
 
 

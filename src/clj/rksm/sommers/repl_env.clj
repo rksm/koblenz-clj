@@ -21,13 +21,20 @@
 (defn shutdown []
   (@shutdown-fn))
 
-(defn eval [form]
+(defmacro remote-eval [form]
   (when (nil? @nrepl-env) (throw (Exception. "No nrepl environment")))
-  (repl-server/eval @nrepl-env form))
+  `(repl-server/eval @nrepl-env '~form))
+
+(defmacro remote-eval-val [form]
+  `(->> (remote-eval ~form)
+       first
+       :value
+       read-string))
 
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 (comment
+
   (defn- start [repl-state]
     )
 
