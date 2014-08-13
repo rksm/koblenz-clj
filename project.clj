@@ -1,4 +1,4 @@
-(defproject rksm/sommers "0.1.1-SNAPSHOT"
+(defproject rksm/sommers "0.1.1"
   :description "easy browser repl setup"
   :url "https://github.com/rksm/sommers"
   :license {:name "Eclipse Public License"
