@@ -1,4 +1,4 @@
-(defproject rksm/sommers "0.1.1"
+(defproject rksm/sommers "0.1.2"
   :description "easy browser repl setup"
   :url "https://github.com/rksm/sommers"
   :license {:name "Eclipse Public License"
@@ -15,7 +15,7 @@
                  [org.clojure/core.async "0.1.303.0-886421-alpha"]
 
                  [rksm/subprocess "0.1.0"]
-                 [cider/cider-nrepl "0.8.0-SNAPSHOT"]
+                 [cider/cider-nrepl "0.7.0"]
                  [org.clojure/tools.nrepl "0.2.3"]
 
                  [com.cemerick/piggieback "0.1.3"]
