@@ -22,8 +22,9 @@
   (@shutdown-fn))
 
 (defmacro remote-eval [form]
-  (when (nil? @nrepl-env) (throw (Exception. "No nrepl environment")))
-  `(repl-server/eval @nrepl-env '~form))
+  `(do
+     (when (nil? @nrepl-env) (throw (Exception. "No nrepl environment")))
+     (repl-server/eval @nrepl-env '~form)))
 
 (defmacro remote-eval-val [form]
   `(->> (remote-eval ~form)

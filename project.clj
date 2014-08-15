@@ -26,16 +26,6 @@
 
   :source-paths ["src/clj" "test/clj"]
 
-  ;; FIXME this should autoload a weasel repl but currently throws
-  ;; an error won startup
-  ;; :cljs-weasel-repl
-  ;; {:repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]
-  ;;                 :init (do (require 'weasel.repl.websocket)
-  ;;                           (require 'cemerick.piggieback)
-  ;;                           (cemerick.piggieback/cljs-repl
-  ;;                            :repl-env (weasel.repl.websocket/repl-env
-  ;;                                       :ip "0.0.0.0" :port 9001)))}}
-
   :cljx {:builds [{:source-paths ["src/cljx"]
                    :output-path "target/classes"
                    :rules :clj}
